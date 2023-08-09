@@ -1,10 +1,8 @@
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 import { Dashboard } from "./Pages/Dashboard";
-import { Blogs } from "./Pages/Blogs";
-import { AddBlogs } from "./Pages/AddBlogs";
-import { UserBlogs } from "./Pages/UserBlogs";
-import { EditBlogs } from "./Pages/EditBlogs";
+import { ForgotPassword } from "./Pages/forgot";
+import { ResetPassword } from "./Pages/reset";
 import { Login } from "./Pages/Login";
 import { Signup } from "./Pages/Signup";
 
@@ -19,12 +17,10 @@ function App()
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Dashboard/>} />
-          <Route exact path="/blogs" element={<Blogs/>} />
-          <Route exact path="/blog/user" element={<UserBlogs/>} />
-          <Route exact path="/add/blogs" element={<AddBlogs/>} />
-          <Route exact path="/user/blogs/edit" element={<EditBlogs/>} />
           <Route exact path="/login" element={<Login/>} />
           <Route exact path="/signup" element={<Signup/>} />
+          <Route exact path="/forgot-password" element={<ForgotPassword/>} />
+          <Route exact path="/reset-password" element={<ResetPassword/>} />
         </Routes>
       </div>
   ); 

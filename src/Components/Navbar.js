@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 export const Navbar = () =>{
 
+    const urlSearchParams = new URLSearchParams(window.location.search);
+        const token = urlSearchParams.get('token');
     const Navigate = useNavigate();
     return(
         <div>
@@ -11,11 +13,9 @@ export const Navbar = () =>{
                 <AppBar position="static">
                     <Toolbar>
                         <Button color="inherit" onClick={() => Navigate("/")}>Dashboard</Button>
-                        <Button color="inherit" onClick={() => Navigate("/blogs")}>Blogs</Button>
-                        <Button color="inherit" onClick={() => Navigate("/blog/user")}>UserBlogs</Button>
-                        <Button color="inherit" onClick={() => Navigate("/add/blogs")}>Add Blogs</Button>
                         <Button color="inherit" onClick={() => Navigate("/login")}>Login</Button>
-                        <Button color="inherit" onClick={() => Navigate("/signup")}>Signup</Button>  
+                        <Button color="inherit" onClick={() => Navigate("/signup")}>Signup</Button>
+                        <Button color="inherit" onClick={() => Navigate("/forgot-password")}>Forgot Password</Button> 
                     </Toolbar>
                 </AppBar>
             </Box>

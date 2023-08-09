@@ -4,7 +4,8 @@ import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { handleLogin } from "../Services/auth";
 
-export const Login = () =>{
+export const Login = () =>
+{
     const [name, SetName] = useState("");
     const [email, SetEmail] = useState("");
     const [password, SetPassword] = useState("");
@@ -12,7 +13,8 @@ export const Login = () =>{
     const [successMsg, setSuccessMsg] = useState("");
     const Navigate = useNavigate();
 
-    const loginUser = async () =>{
+    const loginUser = async () =>
+    {
         const payload = {name,email,password};
 
         handleLogin(payload).then((data)=>
