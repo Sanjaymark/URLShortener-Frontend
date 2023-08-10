@@ -13,9 +13,11 @@ export const Navbar = () =>{
                 <AppBar position="static">
                     <Toolbar>
                         <Button color="inherit" onClick={() => Navigate("/")}>Dashboard</Button>
-                        <Button color="inherit" onClick={() => Navigate("/login")}>Login</Button>
-                        <Button color="inherit" onClick={() => Navigate("/signup")}>Signup</Button>
-                        <Button color="inherit" onClick={() => Navigate("/forgot-password")}>Forgot Password</Button> 
+                        <Button color="inherit" onClick={() => Navigate("/user/login")}>Login</Button>
+                        <Button color="inherit" onClick={() => Navigate("/user/signup")}>Signup</Button>
+                        <Button color="inherit" onClick={() => Navigate("/user/forgot-password")}>Forgot Password</Button>
+                        <Button color="inherit" onClick={() => Navigate("/url/shorteningUrl")}>Make your URL Short</Button>
+                        <Button color="inherit" onClick={() => Navigate("/url/shortUrls/created")}>Shortened URLs</Button>  
                     </Toolbar>
                 </AppBar>
             </Box>

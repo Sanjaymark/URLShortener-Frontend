@@ -3,7 +3,7 @@ import { API } from "./api"
 
 export async function handleSignup(payload)
 {
-    const response = await fetch(`${API}/signup`,
+    const response = await fetch(`${API}/user/signup`,
     {
         method:"POST",
         body: JSON.stringify(payload),
@@ -19,7 +19,7 @@ export async function handleSignup(payload)
 
 export async function handleLogin(payload)
 {
-    const response = await fetch(`${API}/login`,
+    const response = await fetch(`${API}/user/login`,
     {
         method:"POST",
         body: JSON.stringify(payload),
@@ -35,7 +35,7 @@ export async function handleLogin(payload)
 
 export async function handleForgot(payload)
 {
-    const response = await fetch(`${API}/forgot-password`,
+    const response = await fetch(`${API}/user/forgot-password`,
     {
         method:"POST",
         body: JSON.stringify(payload),
@@ -56,7 +56,7 @@ export async function handleReset(payload)
 
     console.log(token);
 
-    const response = await fetch(`${API}/reset-password/${token}`,
+    const response = await fetch(`${API}/user/reset-password/${token}`,
     {
         method:"POST",
         body: JSON.stringify(payload),
